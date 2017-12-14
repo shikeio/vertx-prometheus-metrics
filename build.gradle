@@ -46,7 +46,7 @@ dependencies {
   testCompile 'junit:junit:4.12'
 }
 
-task annotationProcessing(type: JavaCompile, group: 'build') { // codegen
+task annotationProcessing(type: JavaCompile, group: 'build') {
   source = sourceSets.main.java
   classpath = configurations.compile + configurations.compileOnly
   destinationDir = project.file('src/main/generated')
@@ -57,11 +57,22 @@ task annotationProcessing(type: JavaCompile, group: 'build') { // codegen
   ]
 }
 
+task docProcessing(type: JavaCompile, group: 'build') {
+  source = sourceSets.main.java
+  classpath = configurations.compile + configurations.compileOnly
+  destinationDir = project.file('src/main/asciidoc')
+  options.compilerArgs = [
+    "-proc:only",
+    "-processor", "io.vertx.docgen.JavaDocGenProcessor",
+    "-Adocgen.output=${project.buildDir}/asciidoc"
+  ]
+}
+
 compileJava {
   targetCompatibility = 1.8
   sourceCompatibility = 1.8
 
-  dependsOn annotationProcessing
+  dependsOn annotationProcessing, docProcessing
 }
 
 sourceSets {

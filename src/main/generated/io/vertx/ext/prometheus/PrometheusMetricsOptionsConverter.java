@@ -17,7 +17,6 @@
 package io.vertx.ext.prometheus;
 
 import io.vertx.core.json.JsonObject;
-import io.vertx.core.json.JsonArray;
 
 /**
  * Converter for {@link io.vertx.ext.prometheus.PrometheusMetricsOptions}.
@@ -28,7 +27,7 @@ public class PrometheusMetricsOptionsConverter {
 
   public static void fromJson(JsonObject json, PrometheusMetricsOptions obj) {
     if (json.getValue("serverOptions") instanceof JsonObject) {
-      obj.setServerOptions(new io.vertx.core.http.HttpServerOptions((JsonObject)json.getValue("serverOptions")));
+      obj.setServerOptions(new io.vertx.core.http.HttpServerOptions((JsonObject) json.getValue("serverOptions")));
     }
   }
 

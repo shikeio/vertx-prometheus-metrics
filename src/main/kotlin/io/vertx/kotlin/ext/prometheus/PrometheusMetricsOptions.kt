@@ -8,17 +8,17 @@ import io.vertx.ext.dropwizard.Match
  * A function providing a DSL for building [io.vertx.ext.prometheus.PrometheusMetricsOptions] objects.
  *
  *
- * @param baseName 
- * @param configPath 
- * @param enabled 
- * @param jmxDomain 
- * @param jmxEnabled 
- * @param monitoredEventBusHandlers 
- * @param monitoredHttpClientEndpoints 
- * @param monitoredHttpClientUris 
- * @param monitoredHttpServerUris 
- * @param registryName 
- * @param serverOptions 
+ * @param baseName
+ * @param configPath
+ * @param enabled
+ * @param jmxDomain
+ * @param jmxEnabled
+ * @param monitoredEventBusHandlers
+ * @param monitoredHttpClientEndpoints
+ * @param monitoredHttpClientUris
+ * @param monitoredHttpServerUris
+ * @param registryName
+ * @param serverOptions
  *
  * <p/>
  * NOTE: This function has been automatically generated from the [io.vertx.ext.prometheus.PrometheusMetricsOptions original] using Vert.x codegen.

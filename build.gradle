@@ -4,7 +4,7 @@ ext {
 }
 
 group = 'io.vertx'
-version = '3.5.0'
+version = '3.5.1-SNAPSHOT'
 
 repositories {
   mavenLocal()

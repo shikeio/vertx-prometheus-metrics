@@ -1,0 +1,27 @@
+= Cheatsheets
+
+[[PrometheusMetricsOptions]]
+== PrometheusMetricsOptions
+
+++++
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[baseName]]`baseName`|`String`|-
+|[[configPath]]`configPath`|`String`|-
+|[[enabled]]`enabled`|`Boolean`|-
+|[[jmxDomain]]`jmxDomain`|`String`|-
+|[[jmxEnabled]]`jmxEnabled`|`Boolean`|-
+|[[monitoredEventBusHandlers]]`monitoredEventBusHandlers`|`Array of link:dataobjects.html#Match[Match]`|-
+|[[monitoredHttpClientEndpoint]]`monitoredHttpClientEndpoint`|`Array of link:dataobjects.html#Match[Match]`|-
+|[[monitoredHttpClientEndpoints]]`monitoredHttpClientEndpoints`|`Array of link:dataobjects.html#Match[Match]`|-
+|[[monitoredHttpClientUris]]`monitoredHttpClientUris`|`Array of link:dataobjects.html#Match[Match]`|-
+|[[monitoredHttpServerUris]]`monitoredHttpServerUris`|`Array of link:dataobjects.html#Match[Match]`|-
+|[[registryName]]`registryName`|`String`|-
+|[[serverOptions]]`serverOptions`|`link:dataobjects.html#HttpServerOptions[HttpServerOptions]`|-
+|===
+

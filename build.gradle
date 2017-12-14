@@ -1,6 +1,6 @@
 ext {
   prometheusVersion = '0.1.0'
-  vertxVersion = '3.5.0'
+  vertxVersion = '3.5.1-SNAPSHOT'
 }
 
 group = 'io.vertx'

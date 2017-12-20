@@ -2,6 +2,7 @@ package io.vertx.ext.prometheus;
 
 import io.vertx.codegen.annotations.DataObject;
 import io.vertx.core.http.HttpServerOptions;
+import io.vertx.core.json.Json;
 import io.vertx.core.json.JsonObject;
 import io.vertx.ext.dropwizard.DropwizardMetricsOptions;
 
@@ -49,8 +50,6 @@ public class PrometheusMetricsOptions extends DropwizardMetricsOptions {
 
   @Override
   public JsonObject toJson() {
-    JsonObject result = new JsonObject();
-    PrometheusMetricsOptionsConverter.toJson(this, result);
-    return result;
+    return new JsonObject(Json.encode(this));
   }
 }

@@ -30,6 +30,8 @@ public class VertxMetricsFactoryImpl extends io.vertx.ext.dropwizard.impl.VertxM
     PrometheusMetricsOptions metricsOptions;
     if (baseOptions instanceof PrometheusMetricsOptions) {
       metricsOptions = (PrometheusMetricsOptions) baseOptions;
+    } else if (baseOptions instanceof DropwizardMetricsOptions) {
+      metricsOptions = new PrometheusMetricsOptions((DropwizardMetricsOptions) baseOptions);
     } else {
       metricsOptions = new PrometheusMetricsOptions(baseOptions.toJson());
     }
